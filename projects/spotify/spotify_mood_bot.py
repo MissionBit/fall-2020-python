@@ -11,12 +11,12 @@ credentials = SpotifyClientCredentials(client_id='', client_secret='')
 spotify = spotipy.Spotify(client_credentials_manager=credentials)
 
 mood_regex_to_genres = {
-  'happy|excited|great|fantastic|good|:\)|:D': ['happy', 'party'],
-  'sad|down|depressed|bad|:\(': ['acoustic', 'piano', 'sad'],
-  'stressed': ['classical', 'jazz'],
-  'angry|frustrated|pissed|>:\(': ['heavy-metal', 'hip-hop', 'metal'],
-  '(in )?lov(e|ing|ed)?|<3': ['romantic'],
-  'sleepy|zzz|tired': ['ambient', 'sleep'],
+  r'happy|excited|great|fantastic|good|:\)|:D': ['happy', 'party'],
+  r'sad|down|depressed|bad|:\(': ['acoustic', 'piano', 'sad'],
+  r'stressed': ['classical', 'jazz'],
+  r'angry|frustrated|pissed|>:\(': ['heavy-metal', 'hip-hop', 'metal'],
+  r'(in )?lov(e|ing|ed)?|<3': ['romantic'],
+  r'sleepy|zzz|tired': ['ambient', 'sleep'],
 }
 
 def choose_index(options):
